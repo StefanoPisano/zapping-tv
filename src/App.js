@@ -10,7 +10,7 @@ function App() {
     useEffect(() => {
 
         const fetchAndParseShows = async () => {
-            const proxyUrl = "https://cors-anywhere.herokuapp.com/"
+            const proxyUrl = "https://corsproxy.io/?"
             const source = "https://www.staseraintv.com/programmi_stasera_"
             const channels = ['rai1', 'rai2', 'rai3', 'rete4', 'canale5', 'italia1', 'la7', 'tv8', 'nove', 'realtime', 'dmax']
             try {
