@@ -113,7 +113,7 @@ const ChannelComponent: React.FC<ProgramProps> = ({channelId, channelName}) => {
     }, [channelId, loadShows]);
 
     return (
-        <div className="w-2/5 bg-gray-200 rounded-lg">
+        <div className="w-11/12 bg-gray-200 rounded-lg md:w-4/5 lg:w-2/5">
             <div className={'flex h-12 items-center justify-center gap-2 rounded-t-lg'} onClick={load}>
                 {channelLogo ? (
                     <img className={"h-8"} alt={channelName} src={channelLogo}/>
