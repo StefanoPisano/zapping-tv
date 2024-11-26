@@ -1,5 +1,5 @@
 {
-  "name": "whats-on-italian-tv",
+  "name": "zapping-tv",
   "author": {
     "name": "Stefano Pisano",
     "linkedin": "https://www.linkedin.com/in/stefano-pisano/",
@@ -8,7 +8,7 @@
   },
   "version": "1.0.0",
   "private": true,
-  "homepage": "https://stefanopisano.github.io/whats-on-italian-tv",
+  "homepage": "https://stefanopisano.github.io/zapping-tv",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
