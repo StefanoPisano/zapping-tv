@@ -1,5 +1,6 @@
 import './App.css';
 import ChannelComponent from "./Components/Channel/ChannelComponent";
+import Contacts from "./Components/Contacts/Contacts";
 
 function App() {
     const channels = [
@@ -17,15 +18,22 @@ function App() {
     ]
 
   return (
-    <div className="App ">
-      <header className="App-header">
-          <div className="container m-auto flex items-center flex-col gap-5 mt-10 mb-10">
-              {channels.map(({ channelId, channelName }) => (
-                  <ChannelComponent key={channelId} channelId={channelId} channelName={channelName} />
-              ))}
+      <div className="App ">
+          <div className={"container"}>
+              <main>
+                  <div className="container m-auto flex items-center flex-col gap-5 mt-10 mb-10">
+                      {channels.map(({channelId, channelName}) => (
+                          <ChannelComponent key={channelId} channelId={channelId} channelName={channelName}/>
+                      ))}
+                  </div>
+              </main>
           </div>
-      </header>
-    </div>
+
+          <footer>
+              <Contacts/>
+              <span className="credits">© {new Date().getFullYear()}</span>
+          </footer>
+      </div>
   );
 }
 

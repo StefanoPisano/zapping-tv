@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+
+.contacts__div {
+    font-family: "Merriweather", "Georgia", Cambria, "Times New Roman", Times, serif;
+    text-align: center;
+    width: 100%;
+    margin:1rem 0;
+    font-size:16px;
+    color: rgb(46, 53, 63);
+    font-weight: 400;
+}
+
+.link {
+    color: black;
+    text-decoration: underline;
+}

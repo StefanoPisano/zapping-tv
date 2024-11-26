@@ -1,6 +1,12 @@
 {
   "name": "whats-on-italian-tv",
-  "version": "0.1.0",
+  "author": {
+    "name": "Stefano Pisano",
+    "linkedin": "https://www.linkedin.com/in/stefano-pisano/",
+    "github": "https://github.com/StefanoPisano",
+    "spotify": "https://open.spotify.com/user/stefanopis?si=36f918a42cf24af6"
+  },
+  "version": "1.0.0",
   "private": true,
   "homepage": "https://stefanopisano.github.io/whats-on-italian-tv",
   "dependencies": {
