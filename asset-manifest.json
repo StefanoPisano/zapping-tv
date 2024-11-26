@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/StefanoPisano/whats-on-italian-tv/static/css/main.02f1fb4c.css",
+    "main.js": "/StefanoPisano/whats-on-italian-tv/static/js/main.f4826d78.js",
+    "static/js/453.e249c89a.chunk.js": "/StefanoPisano/whats-on-italian-tv/static/js/453.e249c89a.chunk.js",
+    "static/media/la7.svg": "/StefanoPisano/whats-on-italian-tv/static/media/la7.7a0e916cb05c27a44a6f.svg",
+    "static/media/rai3.svg": "/StefanoPisano/whats-on-italian-tv/static/media/rai3.18e245004bd2186f9970.svg",
+    "static/media/realtime.svg": "/StefanoPisano/whats-on-italian-tv/static/media/realtime.61c119f72d9a21361f4b.svg",
+    "static/media/rai2.svg": "/StefanoPisano/whats-on-italian-tv/static/media/rai2.b52141e37aef875a0c1b.svg",
+    "static/media/nove.svg": "/StefanoPisano/whats-on-italian-tv/static/media/nove.6747e4205772ba8d271f.svg",
+    "static/media/canale5.svg": "/StefanoPisano/whats-on-italian-tv/static/media/canale5.7300cd57f234ea3b73f0.svg",
+    "static/media/rai1.svg": "/StefanoPisano/whats-on-italian-tv/static/media/rai1.5d848262a7ff96b4daf7.svg",
+    "static/media/italia1.svg": "/StefanoPisano/whats-on-italian-tv/static/media/italia1.cff5d460698834a0d373.svg",
+    "static/media/tv8.svg": "/StefanoPisano/whats-on-italian-tv/static/media/tv8.a1b6e03489052ca49e55.svg",
+    "static/media/rete4.svg": "/StefanoPisano/whats-on-italian-tv/static/media/rete4.39d3a6299d0f913185e7.svg",
+    "static/media/dmax.svg": "/StefanoPisano/whats-on-italian-tv/static/media/dmax.1553bc5fcb3b6dec5f01.svg",
+    "index.html": "/StefanoPisano/whats-on-italian-tv/index.html",
+    "main.02f1fb4c.css.map": "/StefanoPisano/whats-on-italian-tv/static/css/main.02f1fb4c.css.map",
+    "main.f4826d78.js.map": "/StefanoPisano/whats-on-italian-tv/static/js/main.f4826d78.js.map",
+    "453.e249c89a.chunk.js.map": "/StefanoPisano/whats-on-italian-tv/static/js/453.e249c89a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.02f1fb4c.css",
+    "static/js/main.f4826d78.js"
+  ]
+}
