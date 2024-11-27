@@ -1,70 +1,69 @@
-# Getting Started with Create React App
+# :tv: Zapping TV
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Description
 
-## Available Scripts
+Zapping TV is a web application that allows users to view the current TV schedule for popular Italian television channels. The application provides an interactive interface where users can easily browse and select channels to see their programming in real-time. With a focus on user experience, Zapping TV aims to make it simple for viewers to find what to watch next.
 
-In the project directory, you can run:
+## Features
 
-### `npm start` 
+- **Channel Listings**: Access a variety of popular Italian channels, including Rai 1, Rai 2, Rete 4, Canale 5, Italia 1, and more.
+- **Current Schedule**: View the current TV schedule for each selected channel, including show titles, start times, and descriptions.
+- **Interactive UI**: Click on a channel to toggle its schedule view, making it easy to switch between different channels.
+- **Responsive Design**: Optimized for both desktop and mobile devices, ensuring a seamless user experience.
+- **Real-Time Updates**: Get the latest TV schedule information dynamically.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Technologies Used
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **React**: For building the user interface.
+- **TypeScript**: For type safety and improved developer experience.
+- **Tailwind**: For styling the application.
+- **API Integration**: Fetching real-time TV schedule data from a reliable source.
 
-### `npm test`
+## Installation
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+To run the project locally, follow these steps:
 
-### `npm run build`
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/StefanoPisano/zapping-tv.git
+   ```
+2. Navigate to the project directory:
+   ```bash
+   cd zapping-tv
+   ```
+3. Install the dependencies:
+   ```bash
+   npm install
+   ```
+4. Start the development server:
+   ```bash
+   npm start
+   ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Once the development server is running, open your web browser and navigate to `http://localhost:3000` to view the application. You can click on the channels to see their current schedules.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Usage
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Upon loading the application, you will see a list of available channels.
+- Click on any channel to view its current programming schedule.
+- The schedule will update in real-time, providing you with the latest information.
 
-### `npm run eject`
+## Contributing
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Contributions are welcome! If you have suggestions for improvements or new features, please open an issue or submit a pull request. To contribute:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature/YourFeature`).
+3. Make your changes and commit them (`git commit -m 'Add some feature'`).
+4. Push to the branch (`git push origin feature/YourFeature`).
+5. Open a pull request.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## License
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
-## Learn More
+## Acknowledgments
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Thanks to the contributors and the community for their support.
+- Special thanks to the API providers for making real-time TV schedule data available.
+- Inspiration from various TV guide applications.
