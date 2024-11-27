@@ -9,11 +9,13 @@ interface Show {
 
 interface ProgramProps {
     channelId: string
-    channelName: string
+    channelName: string,
+    loadShows : boolean,
+    onChannelClick: () => void
 }
 
 
-const ChannelComponent: React.FC<ProgramProps> = ({channelId, channelName}) => {
+const ChannelComponent: React.FC<ProgramProps> = ({channelId, channelName, loadShows, onChannelClick}) => {
     let channelLogo;
     try {
         channelLogo = require(`../../assets/images/channels/${channelId}.svg`);
@@ -21,11 +23,6 @@ const ChannelComponent: React.FC<ProgramProps> = ({channelId, channelName}) => {
         channelLogo = null;
     }
     const [tvShows, setTvShows] = useState<Show[]>([]);
-    const [loadShows, setLoadShows] = useState(false);
-
-    const load = () => {
-        setLoadShows(prev => !prev);
-    };
 
     useEffect(() => {
         const fetchAndParseShows = async () => {
@@ -113,8 +110,8 @@ const ChannelComponent: React.FC<ProgramProps> = ({channelId, channelName}) => {
     }, [channelId, loadShows]);
 
     return (
-        <div className="w-11/12 bg-gray-200 rounded-lg md:w-4/5 lg:w-2/5">
-            <div className={'flex h-12 items-center justify-center gap-2 rounded-t-lg'} onClick={load}>
+        <div className={`w-11/12 bg-gray-200 rounded-lg md:w-4/5 lg:w-2/5 ${loadShows ? 'opacity-100' : 'opacity-70'}`}  onClick={onChannelClick}>
+            <div className={'flex h-12 items-center justify-center gap-2 rounded-t-lg'}>
                 {channelLogo ? (
                     <img className={"h-8"} alt={channelName} src={channelLogo}/>
                 ) : (
