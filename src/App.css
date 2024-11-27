@@ -9,6 +9,11 @@ footer {
   background: #cacaca;
 }
 
+.logo {
+  text-align: center;
+  color: #cacaca ;
+}
+
 .credits {
   font-size:.7em
 }

@@ -24,6 +24,10 @@ const App: React.FC = () => {
 
     return (
         <div className="App ">
+            <header>
+                <div className={"logo mt-5 mb-2 text-3xl"}>Zapping Tv!</div>
+            </header>
+
             <div className={"container"}>
                 <main>
                     <div className="container m-auto flex items-center flex-col gap-5 mt-10 mb-10">
