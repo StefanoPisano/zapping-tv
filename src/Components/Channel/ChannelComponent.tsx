@@ -23,6 +23,7 @@ const ChannelComponent: React.FC<ProgramProps> = ({channelId, channelName, loadS
         channelLogo = null;
     }
     const [tvShows, setTvShows] = useState<Show[]>([]);
+    const [loadCompleted, setLoadCompleted] = useState(false);
 
     useEffect(() => {
         const fetchAndParseShows = async () => {
@@ -98,6 +99,8 @@ const ChannelComponent: React.FC<ProgramProps> = ({channelId, channelName, loadS
                     }
 
                     setTvShows(shows);
+
+                    setLoadCompleted(true);
                 }
 
             } catch (error) {
@@ -119,7 +122,11 @@ const ChannelComponent: React.FC<ProgramProps> = ({channelId, channelName, loadS
                 )}
             </div>
 
-            {loadShows && <ScheduleComponent shows={tvShows}/>}
+            {loadShows &&
+                <div className={`transition-opacity duration-1000 ease-in-out ${loadCompleted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
+                <ScheduleComponent shows={tvShows}/>
+            </div>
+            }
         </div>
     );
 }
