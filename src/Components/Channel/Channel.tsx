@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react";
-import ScheduleComponent from "@/Components/Schedule/ScheduleComponent";
-import {months} from "@/constants/months"
+import Schedule from "@/Components/Schedule/Schedule";
+import months from "@/constants/months"
 
 interface Show {
     title: string;
@@ -16,7 +16,7 @@ interface ProgramProps {
 }
 
 
-const ChannelComponent: React.FC<ProgramProps> = ({channelId, channelName, loadShows, onChannelClick}) => {
+const Channel: React.FC<ProgramProps> = ({channelId, channelName, loadShows, onChannelClick}) => {
     let channelLogo;
     try {
         channelLogo = require(`../../assets/images/channels/${channelId}.svg`);
@@ -97,6 +97,8 @@ const ChannelComponent: React.FC<ProgramProps> = ({channelId, channelName, loadS
         }
         if (loadShows) {
             fetchAndParseShows();
+        } else {
+            setTvShows([])
         }
     }, [channelId, loadShows]);
 
@@ -112,10 +114,10 @@ const ChannelComponent: React.FC<ProgramProps> = ({channelId, channelName, loadS
 
             <div
                 className={`transition-opacity duration-1000 ease-in-out ${loadCompleted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
-                <ScheduleComponent shows={tvShows}/>
+                <Schedule shows={tvShows}/>
             </div>
         </div>
     );
 }
 
-export default ChannelComponent;
+export default Channel;

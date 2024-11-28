@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./ScheduleComponent.module.css"
+import styles from "./Schedule.module.css"
 
 interface Show {
     title: string,
@@ -12,7 +12,7 @@ interface Shows {
     shows: Show[]
 }
 
-const ScheduleComponent : React.FC<Shows> = ({shows}) => {
+const Schedule : React.FC<Shows> = ({shows}) => {
 
     const now = Date.now();
     for(let i = 0; i < shows.length; i++)  {
@@ -44,4 +44,4 @@ const ScheduleComponent : React.FC<Shows> = ({shows}) => {
     )
 }
 
-export default ScheduleComponent;
+export default Schedule;

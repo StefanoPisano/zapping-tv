@@ -1,6 +1,6 @@
-import './App.css';
-import ChannelComponent from "./Components/Channel/ChannelComponent";
-import Contacts from "./Components/Contacts/Contacts";
+import '@/App.css';
+import Channel from "@/Components/Channel/Channel";
+import Contacts from "@/Components/Contacts/Contacts";
 import React, {useState} from "react";
 
 const App: React.FC = () => {
@@ -32,11 +32,11 @@ const App: React.FC = () => {
                 <main>
                     <div className="container m-auto flex items-center flex-col gap-5 mt-10 mb-10">
                         {channels.map(({channelId, channelName}) => (
-                            <ChannelComponent key={channelId}
-                                              channelId={channelId}
-                                              channelName={channelName}
-                                              loadShows={channelId === requestedChannel}
-                                              onChannelClick={() => handleChannelClick(channelId)}/>
+                            <Channel key={channelId}
+                                     channelId={channelId}
+                                     channelName={channelName}
+                                     loadShows={channelId === requestedChannel}
+                                     onChannelClick={() => handleChannelClick(channelId)}/>
                         ))}
                     </div>
                 </main>

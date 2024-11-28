@@ -1,6 +1,6 @@
 import * as React from "react";
 import styles from "./Contacts.module.css";
-import packageJson from '../../../package.json';
+import packageJson from './../../../package.json';
 
 const Contacts : React.FC = () => {
     return (
