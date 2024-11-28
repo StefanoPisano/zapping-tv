@@ -65,8 +65,6 @@ const Channel: React.FC<ProgramProps> = ({channelId, channelName, loadShows, onC
                         .map(content => content.replace("<span>", ""))
                         .map(content => content.replace("</span>", ""))
 
-
-
                     const date = new Date(parseInt(dateArray[3]), months.indexOf(dateArray[2].toLowerCase()), parseInt(dateArray[1]));
 
                     let nextDay = false
@@ -87,7 +85,6 @@ const Channel: React.FC<ProgramProps> = ({channelId, channelName, loadShows, onC
                     }
 
                     setTvShows(shows);
-
                     setLoadCompleted(true);
                 }
 
@@ -99,11 +96,12 @@ const Channel: React.FC<ProgramProps> = ({channelId, channelName, loadShows, onC
             fetchAndParseShows();
         } else {
             setTvShows([])
+            setLoadCompleted(false);
         }
     }, [channelId, loadShows]);
 
     return (
-        <div className={"w-11/12 bg-gray-200 rounded-lg md:w-4/5 lg:w-2/5"}  onClick={onChannelClick}>
+        <div className={`w-11/12 bg-gray-200 rounded-lg md:w-4/5 lg:w-2/5  ${loadCompleted ? 'h-auto' : 'h-12'}`}  onClick={onChannelClick}>
             <div className={'flex h-12 items-center justify-center gap-2 rounded-t-lg'}>
                 {channelLogo ? (
                     <img className={"h-8"} alt={channelName} src={channelLogo}/>
@@ -113,7 +111,7 @@ const Channel: React.FC<ProgramProps> = ({channelId, channelName, loadShows, onC
             </div>
 
             <div
-                className={`transition-opacity duration-1000 ease-in-out ${loadCompleted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
+                className={`transition-opacity duration-1000 ease-in-out ${loadCompleted ? 'opacity-100 translate-y-0 h-auto' : 'opacity-0 translate-y-4 h-0'}`}>
                 <Schedule shows={tvShows}/>
             </div>
         </div>
