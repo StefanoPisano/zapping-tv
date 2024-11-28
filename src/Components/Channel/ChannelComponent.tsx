@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from "react";
 import ScheduleComponent from "../Schedule/ScheduleComponent";
+import {months} from "../../constants/months"
 
 interface Show {
     title: string;
@@ -8,10 +9,10 @@ interface Show {
 }
 
 interface ProgramProps {
-    channelId: string
-    channelName: string,
-    loadShows : boolean,
-    onChannelClick: () => void
+    channelId: string;
+    channelName: string;
+    loadShows: boolean;
+    onChannelClick: () => void;
 }
 
 
@@ -64,20 +65,7 @@ const ChannelComponent: React.FC<ProgramProps> = ({channelId, channelName, loadS
                         .map(content => content.replace("<span>", ""))
                         .map(content => content.replace("</span>", ""))
 
-                    const months = [
-                        "gennaio",   // January
-                        "febbraio",  // February
-                        "marzo",     // March
-                        "aprile",    // April
-                        "maggio",    // May
-                        "giugno",    // June
-                        "luglio",    // July
-                        "agosto",    // August
-                        "settembre", // September
-                        "ottobre",   // October
-                        "novembre",  // November
-                        "dicembre"   // December
-                    ];
+
 
                     const date = new Date(parseInt(dateArray[3]), months.indexOf(dateArray[2].toLowerCase()), parseInt(dateArray[1]));
 
@@ -122,11 +110,10 @@ const ChannelComponent: React.FC<ProgramProps> = ({channelId, channelName, loadS
                 )}
             </div>
 
-            {loadShows &&
-                <div className={`transition-opacity duration-1000 ease-in-out ${loadCompleted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
+            <div
+                className={`transition-opacity duration-1000 ease-in-out ${loadCompleted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
                 <ScheduleComponent shows={tvShows}/>
             </div>
-            }
         </div>
     );
 }
