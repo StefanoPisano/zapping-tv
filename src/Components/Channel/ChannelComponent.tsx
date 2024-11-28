@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react";
-import ScheduleComponent from "../Schedule/ScheduleComponent";
-import {months} from "../../constants/months"
+import ScheduleComponent from "@/Components/Schedule/ScheduleComponent";
+import {months} from "@/constants/months"
 
 interface Show {
     title: string;
