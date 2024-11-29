@@ -7,17 +7,17 @@ const App: React.FC = () => {
     const [requestedChannel, setRequestedChannel] = useState<string | null>(null);
 
     const channels = [
-        {channelId: 'rai1', channelName: 'Rai 1'},
-        {channelId: 'rai2', channelName: 'Rai 2'},
-        {channelId: 'rai3', channelName: 'Rai 3'},
-        {channelId: 'rete4', channelName: 'Rete 4'},
-        {channelId: 'canale5', channelName: 'Canale 5'},
-        {channelId: 'italia1', channelName: 'Italia 1'},
-        {channelId: 'la7', channelName: 'La7'},
-        {channelId: 'tv8', channelName: 'Tv8'},
-        {channelId: 'nove', channelName: 'Nove'},
-        {channelId: 'realtime', channelName: 'Real Time'},
-        {channelId: 'dmax', channelName: 'DMAX'}
+        {channelId: 'rai1', channelName: 'Rai 1', streamingLink: 'https://www.raiplay.it/dirette/rai1'},
+        {channelId: 'rai2', channelName: 'Rai 2', streamingLink: 'https://www.raiplay.it/dirette/rai2'},
+        {channelId: 'rai3', channelName: 'Rai 3', streamingLink: 'https://www.raiplay.it/dirette/rai3'},
+        {channelId: 'rete4', channelName: 'Rete 4', streamingLink: 'https://mediasetinfinity.mediaset.it/diretta/rete4_cR4'},
+        {channelId: 'canale5', channelName: 'Canale 5', streamingLink: 'https://mediasetinfinity.mediaset.it/diretta/canale5_cC5'},
+        {channelId: 'italia1', channelName: 'Italia 1', streamingLink: 'https://mediasetinfinity.mediaset.it/diretta/italia1_cI1'},
+        {channelId: 'la7', channelName: 'La7', streamingLink: 'https://www.la7.it/dirette-tv'},
+        {channelId: 'tv8', channelName: 'Tv8', streamingLink: 'https://www.tv8.it/streaming'},
+        {channelId: 'nove', channelName: 'Nove', streamingLink: 'https://nove.tv/live-streaming-nove'},
+        {channelId: 'realtime', channelName: 'Real Time', streamingLink: 'https://realtime.it/live-streaming-real-time'},
+        {channelId: 'dmax', channelName: 'DMAX', streamingLink: 'https://dmax.it/live-streaming-dmax'}
     ]
 
     const handleChannelClick = (channelId: string) => setRequestedChannel(prevChannel => (prevChannel === channelId ? null : channelId));
@@ -31,11 +31,12 @@ const App: React.FC = () => {
             <div className={"container"}>
                 <main>
                     <div className="container m-auto flex items-center flex-col gap-5 mt-10 mb-10">
-                        {channels.map(({channelId, channelName}) => (
+                        {channels.map(({channelId, channelName, streamingLink}) => (
                             <Channel key={channelId}
                                      channelId={channelId}
                                      channelName={channelName}
-                                     loadShows={channelId === requestedChannel}
+                                     loadMyShows={channelId === requestedChannel}
+                                     streamingLink={streamingLink}
                                      onChannelClick={() => handleChannelClick(channelId)}/>
                         ))}
                     </div>
