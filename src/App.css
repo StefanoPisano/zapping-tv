@@ -4,11 +4,6 @@ body {
   background-color: rgba(17, 24, 39, 1);
 }
 
-footer {
-  text-align: center;
-  background: #cacaca;
-}
-
 .logo {
   text-align: center;
   color: #cacaca ;
@@ -33,8 +28,4 @@ footer {
   background: #ccc; /* Example background color */
   padding: 10px;
   text-align: center;
-}
-
-.scroll-button__div {
-  background: #165E9E
 }
