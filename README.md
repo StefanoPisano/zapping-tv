@@ -1,3 +1,6 @@
+<p style="text-align:center;"><img height="150" alt="Zapping TV!" src="./src/assets/images/logo.png">
+</p>
+
 # :tv: Zapping TV
 
 Zapping TV is a web application that allows users to view the current TV schedule for popular Italian television channels. The application provides an interactive interface where users can easily browse and select channels to see their programming in real-time. With a focus on user experience, Zapping TV aims to make it simple for viewers to find what to watch next.
