@@ -3,20 +3,20 @@ import Schedule from "@/Components/Schedule/Schedule";
 import months from "@/constants/months";
 import {proxy, source} from "@/constants/scraper";
 import {Show} from "@/Components/classes/Show";
+import {MdLiveTv} from "react-icons/md";
 
 
 interface ChannelProps {
     channelId: string;
     channelName: string;
     loadMyShows: boolean;
-    streamingLink: string | null;
+    streamingLink?: string;
     onChannelClick: () => void;
 }
 
 const Channel: React.FC<ChannelProps> = (channel) => {
     const [tvShows, setTvShows] = useState<Show[]>([]);
-    const [loadCompleted, setLoadCompleted] = useState(false);
-    const [loading, setLoading] = useState(false);
+    const [loaded, setLoaded] = useState(false);
     const [error, setError] = useState<string | null>(null);
 
     const channelLogo = (() => {
@@ -28,7 +28,6 @@ const Channel: React.FC<ChannelProps> = (channel) => {
     })();
 
     const fetchAndParseShows = async () => {
-        setLoading(true);
         setError(null);
 
         try {
@@ -74,12 +73,10 @@ const Channel: React.FC<ChannelProps> = (channel) => {
                 });
 
                 setTvShows(shows);
-                setLoadCompleted(true);
+                setLoaded(true);
             }
         } catch (error) {
             setError('Error fetching or parsing shows.');
-        } finally {
-            setLoading(false);
         }
     };
 
@@ -88,12 +85,12 @@ const Channel: React.FC<ChannelProps> = (channel) => {
             fetchAndParseShows();
         } else {
             setTvShows([]);
-            setLoadCompleted(false);
+            setLoaded(false);
         }
     }, [channel.channelId, channel.loadMyShows]);
 
     return (
-        <div className={`w-11/12 bg-gray-200 rounded-lg md:w-4/5 lg:w-2/5 ${loadCompleted ? 'h-auto' : 'h-12'}`} onClick={channel.onChannelClick}>
+        <div className={`w-11/12 bg-gray-200 rounded-lg md:w-4/5 lg:w-2/5 ${loaded ? 'h-auto' : 'h-12'}`} onClick={channel.onChannelClick}>
             <div className='flex h-12 items-center justify-center gap-2 rounded-t-lg'>
                 {channelLogo ? (
                     <img className="h-8" alt={channel.channelName} src={channelLogo} />
@@ -102,10 +99,12 @@ const Channel: React.FC<ChannelProps> = (channel) => {
                 )}
             </div>
 
-            {loading && <div className="text-center">Loading...</div>}
             {error && <div className="text-red-500 text-center">{error}</div>}
 
-            <div className={`transition-opacity duration-1000 ease-in-out ${loadCompleted ? 'opacity-100 translate-y-0 h-auto' : 'opacity-0 translate-y-4 h-0'}`}>
+            <div className={`transition-opacity duration-1000 ease-in-out ${loaded ? 'opacity-100 translate-y-0 h-auto' : 'opacity-0 translate-y-4 h-0'}`}>
+                <div className={`text-xl text-red-800 ${loaded ? 'flex justify-center' : 'hidden'}`}>
+                    <a href={channel.streamingLink}><MdLiveTv /></a>
+                </div>
                 <Schedule shows={tvShows} />
             </div>
         </div>
