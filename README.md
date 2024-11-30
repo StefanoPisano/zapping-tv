@@ -49,16 +49,6 @@ Once the development server is running, open your web browser and navigate to `h
 - Click on any channel to view its current programming schedule.
 - The schedule will update in real-time, providing you with the latest information.
 
-## Contributing
-
-Contributions are welcome! If you have suggestions for improvements or new features, please open an issue or submit a pull request. To contribute:
-
-1. Fork the repository.
-2. Create a new branch (`git checkout -b feature/YourFeature`).
-3. Make your changes and commit them (`git commit -m 'Add some feature'`).
-4. Push to the branch (`git push origin feature/YourFeature`).
-5. Open a pull request.
-
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
