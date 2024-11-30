@@ -1,10 +1,17 @@
 import '@/App.css';
 import Channel from "@/Components/Channel/Channel";
 import Contacts from "@/Components/Contacts/Contacts";
-import React, {useState} from "react";
+import React, {useRef, useState} from "react";
 
 const App: React.FC = () => {
     const [requestedChannel, setRequestedChannel] = useState<string | null>(null);
+    const targetRef = useRef<HTMLDivElement>(null);
+
+    const scrollToElement = () => {
+        if (targetRef.current) {
+            targetRef.current.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
 
     const channels = [
         {channelId: 'rai1', channelName: 'Rai 1', streamingLink: 'https://www.raiplay.it/dirette/rai1'},
@@ -27,12 +34,19 @@ const App: React.FC = () => {
     return (
         <div className="App ">
             <header>
-                <div className={"flex justify-center mt-5 mb-2 text-3xl h-28"}>
-                    <img className={"h-40"} alt={"Zapping TV! Logo"} src={logo}/>
+                <div className={"flex flex-col justify-center items-center mt-5 mb-2 text-3xl h-dvh"}>
+                    <img className={"h-2/3 animate-pulse"} alt={"Zapping TV! Logo"} src={logo}/>
+                    <div onClick={scrollToElement}
+                        className="scroll-button__div animate-bounce dark:bg-slate-800 p-2 w-10 h-10 ring-1 ring-slate-900/5 dark:ring-slate-200/20 shadow-lg rounded-full flex items-center justify-center">
+                        <svg className="w-6 h-6 text-white" fill="none" stroke-linecap="round"
+                             stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
+                            <path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                        </svg>
+                    </div>
                 </div>
             </header>
 
-            <div className={"container"}>
+            <div ref={targetRef} className={"container"}>
                 <main>
                     <div className="container m-auto flex items-center flex-col gap-5 mt-10 mb-10">
                         {channels.map(({channelId, channelName, streamingLink}) => (
