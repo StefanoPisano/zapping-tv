@@ -2,7 +2,7 @@ import React, {useEffect, useState} from "react";
 import Schedule from "@/Components/Schedule/Schedule";
 import months from "@/constants/months";
 import {proxy, source} from "@/constants/scraper";
-import {Show} from "@/Components/classes/Show";
+import {Show} from "@/classes/Show";
 import {MdLiveTv} from "react-icons/md";
 
 
