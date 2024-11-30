@@ -22,10 +22,18 @@ const App: React.FC = () => {
 
     const handleChannelClick = (channelId: string) => setRequestedChannel(prevChannel => (prevChannel === channelId ? null : channelId));
 
+    const logo = (() => {
+        try {
+            return require(`@/assets/images/logo.png`);
+        } catch {
+            return null;
+        }
+    })();
+
     return (
         <div className="App ">
             <header>
-                <div className={"logo mt-5 mb-2 text-3xl"}>Zapping Tv!</div>
+                <div className={"flex justify-center mt-5 mb-2 text-3xl h-24"}><img alt={"Zapping TV! Logo"} src={logo}/></div>
             </header>
 
             <div className={"container"}>
