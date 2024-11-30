@@ -1,4 +1,4 @@
-<p align="center"><img height="150" alt="Zapping TV!" src="./src/assets/images/logo.png">
+<p style="text-align:center" align="center"><img height="150" alt="Zapping TV!" src="./src/assets/images/logo.png">
 </p>
 
 # :tv: Zapping TV
