@@ -61,12 +61,18 @@ const Channel: React.FC<ChannelProps> = (channel) => {
                 .map(content => content.replace(/<\/?span>/g, ""));
         }
 
+        function decodeHtml(value:string) {
+                const txt = document.createElement("textarea");
+                txt.innerHTML = value;
+                return txt.value;
+        }
+
         function parseShows(showListElement: HTMLHeadingElement) {
             return Array.from(showListElement.innerHTML.split("<br>"))
                 .map(content => content.trim())
                 .filter(show => show !== '')
                 .map(show => show.split(" - "))
-                .map(show => new Show(show[1], show[0], new Date(), channel.streamingLink));
+                .map(show => new Show(decodeHtml(show[1]), show[0], new Date(), channel.streamingLink));
         }
 
         function extractShows(scheduleContainer: HTMLHeadingElement, tempDiv: HTMLDivElement) {
