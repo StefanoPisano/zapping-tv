@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/zapping-tv/static/css/main.d1b96597.css",
-    "main.js": "/zapping-tv/static/js/main.480fd227.js",
+    "main.css": "/zapping-tv/static/css/main.548ccc7d.css",
+    "main.js": "/zapping-tv/static/js/main.54118d4a.js",
     "static/js/453.acb9ca5f.chunk.js": "/zapping-tv/static/js/453.acb9ca5f.chunk.js",
     "static/media/KOMTITT_.ttf": "/zapping-tv/static/media/KOMTITT_.0e8b0ae9b7bdc6bc0839.ttf",
-    "static/media/logo.svg": "/zapping-tv/static/media/logo.19a40f232f1628e4e54c6fd4a330d9e6.svg",
+    "static/media/logo.svg": "/zapping-tv/static/media/logo.1a0dd39789e20baf529e72a600aa4153.svg",
     "static/media/la7.svg": "/zapping-tv/static/media/la7.7a0e916cb05c27a44a6f.svg",
     "static/media/footer.svg": "/zapping-tv/static/media/footer.70bb8db4e38b79728107d7c023297947.svg",
     "static/media/rai3.svg": "/zapping-tv/static/media/rai3.ee888c8bb890cd6c57d9.svg",
@@ -18,12 +18,12 @@
     "static/media/rete4.svg": "/zapping-tv/static/media/rete4.39d3a6299d0f913185e7.svg",
     "static/media/dmax.svg": "/zapping-tv/static/media/dmax.1553bc5fcb3b6dec5f01.svg",
     "index.html": "/zapping-tv/index.html",
-    "main.d1b96597.css.map": "/zapping-tv/static/css/main.d1b96597.css.map",
-    "main.480fd227.js.map": "/zapping-tv/static/js/main.480fd227.js.map",
+    "main.548ccc7d.css.map": "/zapping-tv/static/css/main.548ccc7d.css.map",
+    "main.54118d4a.js.map": "/zapping-tv/static/js/main.54118d4a.js.map",
     "453.acb9ca5f.chunk.js.map": "/zapping-tv/static/js/453.acb9ca5f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d1b96597.css",
-    "static/js/main.480fd227.js"
+    "static/css/main.548ccc7d.css",
+    "static/js/main.54118d4a.js"
   ]
 }
