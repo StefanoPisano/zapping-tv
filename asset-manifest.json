@@ -1,12 +1,12 @@
 {
   "files": {
-    "main.css": "/zapping-tv/static/css/main.bd9b72d9.css",
-    "main.js": "/zapping-tv/static/js/main.95cab864.js",
+    "main.css": "/zapping-tv/static/css/main.ba2173db.css",
+    "main.js": "/zapping-tv/static/js/main.8273f97e.js",
     "static/js/453.acb9ca5f.chunk.js": "/zapping-tv/static/js/453.acb9ca5f.chunk.js",
     "static/media/la7.svg": "/zapping-tv/static/media/la7.7a0e916cb05c27a44a6f.svg",
-    "static/media/logo.svg": "/zapping-tv/static/media/logo.be06cb1da1d6e6f488add7ed2fbcebfa.svg",
-    "static/media/footer.svg": "/zapping-tv/static/media/footer.974b6fcf58b0a2bfef82d2c6c4e4ccea.svg",
-    "static/media/rai3.svg": "/zapping-tv/static/media/rai3.18e245004bd2186f9970.svg",
+    "static/media/logo.svg": "/zapping-tv/static/media/logo.376dff99c3be15b63b2f320d37c6a7a1.svg",
+    "static/media/footer.svg": "/zapping-tv/static/media/footer.b415213b9a322866322af10f0a68fdad.svg",
+    "static/media/rai3.svg": "/zapping-tv/static/media/rai3.ee888c8bb890cd6c57d9.svg",
     "static/media/realtime.svg": "/zapping-tv/static/media/realtime.61c119f72d9a21361f4b.svg",
     "static/media/rai2.svg": "/zapping-tv/static/media/rai2.b52141e37aef875a0c1b.svg",
     "static/media/nove.svg": "/zapping-tv/static/media/nove.6747e4205772ba8d271f.svg",
@@ -17,12 +17,12 @@
     "static/media/rete4.svg": "/zapping-tv/static/media/rete4.39d3a6299d0f913185e7.svg",
     "static/media/dmax.svg": "/zapping-tv/static/media/dmax.1553bc5fcb3b6dec5f01.svg",
     "index.html": "/zapping-tv/index.html",
-    "main.bd9b72d9.css.map": "/zapping-tv/static/css/main.bd9b72d9.css.map",
-    "main.95cab864.js.map": "/zapping-tv/static/js/main.95cab864.js.map",
+    "main.ba2173db.css.map": "/zapping-tv/static/css/main.ba2173db.css.map",
+    "main.8273f97e.js.map": "/zapping-tv/static/js/main.8273f97e.js.map",
     "453.acb9ca5f.chunk.js.map": "/zapping-tv/static/js/453.acb9ca5f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.bd9b72d9.css",
-    "static/js/main.95cab864.js"
+    "static/css/main.ba2173db.css",
+    "static/js/main.8273f97e.js"
   ]
 }
