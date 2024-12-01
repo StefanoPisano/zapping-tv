@@ -1,5 +1,5 @@
 import * as React from "react";
-import styles from "./Contacts.module.css";
+import styles from "./Contacts.module.scss";
 import packageJson from './../../../package.json';
 import Link from "@/UI/Link";
 import {LuHeartHandshake} from "react-icons/lu";

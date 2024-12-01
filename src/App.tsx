@@ -1,4 +1,4 @@
-import '@/App.css';
+import '@/App.scss';
 import React, {useRef} from "react";
 import SplashScreen from "@/Components/SplashScreen/SplashScreen";
 import Channels from "@/Components/Channels/Channels";

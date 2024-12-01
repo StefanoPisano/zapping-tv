@@ -1,0 +1,17 @@
+@import "colors";
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  background-color: $accent-dark-blue
+}
+
+main {
+  flex: 1;
+}
+
+footer {
+  background: $accent-orange;
+  padding: 10px;
+  text-align: center;
+}

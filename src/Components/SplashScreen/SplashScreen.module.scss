@@ -1,0 +1,31 @@
+@import "src/colors";
+@import "src/fonts";
+
+@keyframes fall {
+    0% {
+        top: -200px;
+    }
+    50% {
+        top: 30vh;
+    }
+    70% {
+        top: 25vh;
+    }
+    100% {
+        top: 30vh;
+    }
+}
+.scrollButton {
+    background: $accent-blue
+}
+
+.logoDiv {
+    position: absolute;
+    animation: fall 2s ease-in-out forwards;
+}
+.motto {
+    font-family: $komika_font;
+    position: absolute;
+    top: 60vh;
+    transform: rotate(-15deg);
+}
