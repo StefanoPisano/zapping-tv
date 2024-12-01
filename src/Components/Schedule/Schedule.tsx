@@ -1,5 +1,4 @@
 import React from "react";
-import styles from "./Schedule.module.css"
 
 interface Show {
     title: string,
@@ -39,10 +38,10 @@ const Schedule: React.FC<Shows> = ({shows}) => {
                         {
                             show.onAir
                                 ? <div
-                                    className={"p-1 ml-1 mr-1 h-4 w-4 animate-pulse relative inline-flex rounded-full bg-red-800"}></div>
+                                    className={"p-1 ml-1 mr-1 h-4 w-4 animate-pulse relative inline-flex rounded-full bg-accent-orange"}></div>
                                 : <div className={"p-1 ml-1 mr-1 h-4 w-4"}/>
                         }
-                        <p className={`font-mono text-sm text-black-300 pl-2 pr-2 text-gray-800 ${show.onAir ? styles.current : ''}`}>
+                        <p className={`font-mono text-sm text-black-300 pl-2 pr-2 text-gray-800 ${show.onAir ? 'bg-accent-lightblue' : ''}`}>
                             {show.startsAt} - {show.title}
                         </p>
                     </div>

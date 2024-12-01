@@ -1,12 +1,10 @@
 import '@/App.css';
-import Channel from "@/Components/Channel/Channel";
-import React, {useRef, useState} from "react";
+import React, {useRef} from "react";
 import SplashScreen from "@/Components/SplashScreen/SplashScreen";
-import channels from "@/constants/channels";
+import Channels from "@/Components/Channels/Channels";
 import Footer from "@/Components/Footer/Footer";
 
 const App: React.FC = () => {
-    const [requestedChannel, setRequestedChannel] = useState<string | null>(null);
     const targetRef = useRef<HTMLDivElement>(null);
 
     const scrollToElement = () => {
@@ -15,28 +13,15 @@ const App: React.FC = () => {
         }
     };
 
-    const handleChannelClick = (channelId: string) => setRequestedChannel(prevChannel => (prevChannel === channelId ? null : channelId));
-
     return (
         <div className="App ">
             <header>
                 <SplashScreen handleScrollDown={() => scrollToElement()}/>
             </header>
 
-            <div ref={targetRef} className={"container"}>
-                <main>
-                    <div className="container m-auto flex items-center flex-col gap-5 mt-10 mb-10">
-                        {channels.map(({channelId, channelName, streamingLink}) => (
-                            <Channel key={channelId}
-                                     channelId={channelId}
-                                     channelName={channelName}
-                                     loadMyShows={channelId === requestedChannel}
-                                     streamingLink={streamingLink}
-                                     onChannelClick={() => handleChannelClick(channelId)}/>
-                        ))}
-                    </div>
-                </main>
-            </div>
+            <main ref={targetRef}>
+                <Channels/>
+            </main>
 
             <footer>
                 <Footer/>

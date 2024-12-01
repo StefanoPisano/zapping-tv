@@ -102,7 +102,7 @@ const Channel: React.FC<ChannelProps> = (channel) => {
             {error && <div className="text-red-500 text-center">{error}</div>}
 
             <div className={`transition-opacity duration-1000 ease-in-out ${loaded ? 'opacity-100 translate-y-0 h-auto' : 'opacity-0 translate-y-4 h-0'}`}>
-                <div className={`text-xl text-red-800 ${loaded ? 'flex justify-center' : 'hidden'}`}>
+                <div className={`text-xl text-accent-orange ${loaded ? 'flex justify-center' : 'hidden'}`}>
                     <a href={channel.streamingLink}><MdLiveTv /></a>
                 </div>
                 <Schedule shows={tvShows} />
