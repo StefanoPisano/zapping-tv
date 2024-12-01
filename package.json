@@ -2,9 +2,7 @@
   "name": "zapping-tv",
   "author": {
     "name": "Stefano Pisano",
-    "linkedin": "https://www.linkedin.com/in/stefano-pisano/",
-    "github": "https://github.com/StefanoPisano",
-    "spotify": "https://open.spotify.com/user/stefanopis?si=36f918a42cf24af6"
+    "portfolio": "https://stefanopisano.github.io/"
   },
   "version": "1.0.0",
   "private": true,

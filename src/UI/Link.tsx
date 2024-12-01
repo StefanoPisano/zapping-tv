@@ -8,7 +8,7 @@ interface LinkProps {
 const Link: React.FC<LinkProps> = ({link, label}) => {
     return (
         <>
-            <a className={"underline text-black"} target={"_blank"} rel={"noreferrer"}
+            <a className={"underline"} target={"_blank"} rel={"noreferrer"}
                                      href={link}>{label}</a>
         </>
     )

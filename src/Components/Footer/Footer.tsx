@@ -7,7 +7,7 @@ const Footer: React.FC = () => {
     const footer = require('@/assets/images/zapping-tv/footer.svg').default;
 
     return (
-        <div className={"flex"}>
+        <div className={"flex text-gray-light"}>
             <div className={"basis-1/4 flex items-center"}><img className={" h-16"} alt={"Zapping TV"} src={footer}/>
             </div>
             <div className={"basis-2/4"}>
