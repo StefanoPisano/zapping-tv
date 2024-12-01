@@ -1,3 +1,23 @@
 .scrollButton {
-    background: #165E9E
+    background: #165E9E;
+}
+
+.logoDiv {
+    position: absolute;
+    animation: fall 2s ease-in-out forwards;
+}
+
+@keyframes fall {
+    0% {
+        top: -200px; /* Start above the viewport */
+    }
+    50% {
+        top: 30vh; /* Move to the middle of the viewport */
+    }
+    70% {
+        top: 25vh; /* Slightly bounce up */
+    }
+    100% {
+        top: 30vh; /* Settle in the middle */
+    }
 }
