@@ -7,7 +7,7 @@ const Channels: React.FC = () => {
     const handleChannelClick = (channelId: string) => setRequestedChannel(prevChannel => (prevChannel === channelId ? null : channelId));
 
     return (
-            <div className="flex flex-col justify-center items-center min-h-full h-dvh w-dvw gap-5 mt-10 mb-10">
+            <div className="flex flex-col items-center w-dvw gap-5 mt-10 mb-10">
                 {channels.map(({channelId, channelName, streamingLink}, index) => (
                     <Channel key={channelId}
                              channelId={channelId}
