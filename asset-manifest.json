@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/zapping-tv/static/css/main.30557317.css",
+    "main.css": "/zapping-tv/static/css/main.bd9b72d9.css",
     "main.js": "/zapping-tv/static/js/main.95cab864.js",
     "static/js/453.acb9ca5f.chunk.js": "/zapping-tv/static/js/453.acb9ca5f.chunk.js",
     "static/media/la7.svg": "/zapping-tv/static/media/la7.7a0e916cb05c27a44a6f.svg",
@@ -17,12 +17,12 @@
     "static/media/rete4.svg": "/zapping-tv/static/media/rete4.39d3a6299d0f913185e7.svg",
     "static/media/dmax.svg": "/zapping-tv/static/media/dmax.1553bc5fcb3b6dec5f01.svg",
     "index.html": "/zapping-tv/index.html",
-    "main.30557317.css.map": "/zapping-tv/static/css/main.30557317.css.map",
+    "main.bd9b72d9.css.map": "/zapping-tv/static/css/main.bd9b72d9.css.map",
     "main.95cab864.js.map": "/zapping-tv/static/js/main.95cab864.js.map",
     "453.acb9ca5f.chunk.js.map": "/zapping-tv/static/js/453.acb9ca5f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.30557317.css",
+    "static/css/main.bd9b72d9.css",
     "static/js/main.95cab864.js"
   ]
 }
