@@ -30,6 +30,54 @@ const Channel: React.FC<ChannelProps> = (channel) => {
     const fetchAndParseShows = async () => {
         setError(null);
 
+        function setDates(dateArray: string[], shows: Show[]) {
+
+            const date = new Date(parseInt(dateArray[3]), months.indexOf(dateArray[2].toLowerCase()), parseInt(dateArray[1]));
+
+            let nextDay = false;
+            shows.forEach((show, i) => {
+                const [hours, minutes] = show.startsAt.split(':');
+                const showDate = new Date(date);
+                showDate.setHours(parseInt(hours));
+                showDate.setMinutes(parseInt(minutes));
+
+                if (nextDay || (i > 0 && shows[i].startsAt < shows[i - 1].startsAt)) {
+                    nextDay = true;
+                    showDate.setDate(date.getDate() + 1);
+                }
+
+                show.date = showDate;
+            });
+        }
+
+        function parseScheduleDate(tempDiv: HTMLDivElement) {
+            const dateBox = tempDiv.getElementsByClassName("datebox")[0];
+            const links = dateBox.getElementsByTagName("a");
+            Array.from(links).forEach(link => link.remove());
+
+            return Array.from(dateBox.innerHTML.split("<br>"))
+                .map(content => content.trim())
+                .filter(content => content !== '')
+                .map(content => content.replace(/<\/?span>/g, ""));
+        }
+
+        function parseShows(showListElement: HTMLHeadingElement) {
+            return Array.from(showListElement.innerHTML.split("<br>"))
+                .map(content => content.trim())
+                .filter(show => show !== '')
+                .map(show => show.split(" - "))
+                .map(show => new Show(show[1], show[0], new Date(), channel.streamingLink));
+        }
+
+        function extractShows(scheduleContainer: HTMLHeadingElement, tempDiv: HTMLDivElement) {
+            const shows = parseShows(scheduleContainer);
+
+            const dateArray = parseScheduleDate(tempDiv);
+            setDates(dateArray, shows);
+
+            return shows;
+        }
+
         try {
             const response = await fetch(`${proxy}${source}${channel.channelId}.html`);
             if (!response.ok) throw new Error('Network response was not ok');
@@ -38,41 +86,11 @@ const Channel: React.FC<ChannelProps> = (channel) => {
             const tempDiv = document.createElement('div');
             tempDiv.innerHTML = html.replace(/img/g, "");
 
-            const showListElement = tempDiv.querySelector('h4');
-            if (showListElement) {
-                const shows = Array.from(showListElement.innerHTML.split("<br>"))
-                    .map(content => content.trim())
-                    .filter(show => show !== '')
-                    .map(show => show.split(" - "))
-                    .map(show =>  new Show(show[1], show[0], new Date(), channel.streamingLink));
-
-                const dateBox = tempDiv.getElementsByClassName("datebox")[0];
-                const links = dateBox.getElementsByTagName("a");
-                Array.from(links).forEach(link => link.remove());
-
-                const dateArray = Array.from(dateBox.innerHTML.split("<br>"))
-                    .map(content => content.trim())
-                    .filter(content => content !== '')
-                    .map(content => content.replace(/<\/?span>/g, ""));
-
-                const date = new Date(parseInt(dateArray[3]), months.indexOf(dateArray[2].toLowerCase()), parseInt(dateArray[1]));
-
-                let nextDay = false;
-                shows.forEach((show, i) => {
-                    const [hours, minutes] = show.startsAt.split(':');
-                    const showDate = new Date(date);
-                    showDate.setHours(parseInt(hours));
-                    showDate.setMinutes(parseInt(minutes));
-
-                    if (nextDay || (i > 0 && shows[i].startsAt < shows[i - 1].startsAt)) {
-                        nextDay = true;
-                        showDate.setDate(date.getDate() + 1);
-                    }
-
-                    show.date = showDate;
-                });
-
+            const scheduleContainer = tempDiv.querySelector('h4');
+            if (scheduleContainer) {
+                const shows = extractShows(scheduleContainer, tempDiv);
                 setTvShows(shows);
+
                 setLoaded(true);
             }
         } catch (error) {
