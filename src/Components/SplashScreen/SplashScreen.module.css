@@ -1,3 +1,10 @@
+@font-face {
+    font-family: 'Komika';
+    src: url('../../fonts/KOMTITT_.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 .scrollButton {
     background: var(--accent-blue)
 }
@@ -20,4 +27,11 @@
     100% {
         top: 30vh; /* Settle in the middle */
     }
+}
+
+.motto {
+    font-family: 'Komika', serif;
+    position: absolute;
+    top: 60vh;
+    transform: rotate(-15deg);
 }
