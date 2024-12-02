@@ -1,7 +1,7 @@
 import '@/App.scss';
 import React, {useRef} from "react";
 import SplashScreen from "@/Components/SplashScreen/SplashScreen";
-import Channels from "@/Components/Channels/Channels";
+import ChannelList from "@/Components/ChannelList/ChannelList";
 import Footer from "@/Components/Footer/Footer";
 
 const App: React.FC = () => {
@@ -20,7 +20,7 @@ const App: React.FC = () => {
             </header>
 
             <main ref={targetRef}>
-                <Channels/>
+                <ChannelList/>
             </main>
 
             <footer>

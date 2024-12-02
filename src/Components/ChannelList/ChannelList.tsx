@@ -2,7 +2,7 @@ import channels from "@/constants/channels";
 import Channel from "@/Components/Channel/Channel";
 import React, {useState} from "react";
 
-const Channels: React.FC = () => {
+const ChannelList: React.FC = () => {
     const [requestedChannel, setRequestedChannel] = useState<string | null>(null);
     const handleChannelClick = (channelId: string) => setRequestedChannel(prevChannel => (prevChannel === channelId ? null : channelId));
 
@@ -19,5 +19,5 @@ const Channels: React.FC = () => {
             </div>)
 }
 
-export default Channels;
+export default ChannelList;
 
