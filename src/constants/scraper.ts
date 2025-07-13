@@ -1,4 +1,4 @@
-const proxy = "https://corsproxy.io/?key=1566f6f4&url=";
+const proxy = "https://api.cors.lol/?url=";
 const source = "https://www.staseraintv.com/programmi_stasera_";
 
 export {proxy, source}
